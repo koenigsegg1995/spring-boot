@@ -1,7 +1,5 @@
-package com.example.demo;
+package com.example.demo.finished;
 
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
