@@ -1,17 +1,16 @@
 package com.example.demo;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MyController {
 
-    @RequestMapping("/test1")
-    public String test1(@RequestParam Integer id){
-        System.out.println("id: " + id);
-
-        return "Hello Test1";
+    @RequestMapping("/test")
+    public ResponseEntity<String> test(){
+        return ResponseEntity.status(HttpStatus.ACCEPTED)
+                .body("Hello World");
     }
-
 }
